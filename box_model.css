@@ -1,0 +1,35 @@
+html{
+    font-size: 20px;
+}
+
+main{
+    width: 75%;
+    margin: auto;
+    background-color: rgb(20, 147, 220);
+}
+
+section{
+    min-height: 40vh;
+}
+p{
+   font-size: 1.5rem; 
+   height: 150px;
+   overflow: auto;
+   line-height: 2.0;
+}
+
+section:nth-of-type(2n+2){
+    border-top:2em solid grey;
+    border-bottom:2em solid grey;
+}
+
+section:nth-of-type(odd){
+    border-right:2em solid rgb(108, 165, 42);
+    border-left: 2em solid rgb(108, 165, 42);
+}
+h2{
+    margin:11px 0 11px 0;
+    padding-bottom: 8px;
+    border-bottom: dashed;
+}
+    
