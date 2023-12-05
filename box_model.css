@@ -22,7 +22,7 @@ section:nth-of-type(2n+2){
     border-bottom:2em solid grey;
 }
 
-section:nth-of-type(odd){
+section:nth-of-type(2n+1){
     border-right:2em solid rgb(108, 165, 42);
     border-left: 2em solid rgb(108, 165, 42);
 }
