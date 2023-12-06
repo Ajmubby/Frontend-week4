@@ -4,16 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./favicon.ico">
-    <link rel="stylesheet" href="./box_model.css">
+    <style>
+        li{
+            display: inline-block;
+            width: 40%;
+        }
+       
+        section{
+            background-color: rgb(245, 205, 255);
+            /* display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 200px;
+            column-gap: 20px; */
+            overflow: auto;
+        }
 
-   
+        main{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) ;
+            grid-template-rows: repeat(4, 150px);
+            grid-template-areas: 
+            "a a a a"
+            "a a a a"
+            "b c d d"
+            "e f d d";
+            gap:10px 30px;
+        }
+        section:nth-of-type(1){
+            grid-area: a;
+        }
+        section:nth-of-type(2){
+            grid-area: b;
+        }
+        section:nth-of-type(3){
+            grid-area: c;
+        }
+        section:nth-of-type(4){
+            grid-area: d;
+        }
+        section:nth-of-type(5){
+            grid-area: e;
+        }
+        section:nth-of-type(6){
+            grid-area: f;
+        }
+        
+    </style>
 </head>
 <body>
     <main>
         <section>
             <h2>model 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, dolores nostrum eos placeat sit error at fugit maiores ratione mollitia! Incidunt aspernatur veniam, rem vitae eius voluptatem nihil minus.</p>
+           
         </section>
         <section>
             <h2>model 2</h2>

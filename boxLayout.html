@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box_layout</title>
+    <link rel="stylesheet" href="./favicon.ico">
+    <style>
+        p{
+            padding: none;
+            border: none;
+            text-align: center;
+        }
+
+        section{
+            overflow: auto;
+            border: solid 1px transparent;
+            border-color: green;
+            background-color: rgba(12, 39, 12, 0.76);
+            
+        }
+
+        main{
+            display: grid;
+            grid-template-columns: (4, 1fr);
+            grid-template-rows:(4, 150px);
+            grid-template-areas: 
+            "a a a a"
+            "b c f f"
+            "d e f f";
+            gap:20px 20px;
+        }
+        h2{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       
+
+        section:nth-of-type(1){
+            grid-area: a;
+        }
+        section:nth-of-type(2){
+            grid-area: b;
+        }
+        section:nth-of-type(3){
+            grid-area: c;
+        }
+        section:nth-of-type(4){
+            grid-area: d;
+        }
+        section:nth-of-type(5){
+            grid-area: e;
+        }
+        section:nth-of-type(6){
+            grid-area: f;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>model 1</h2>
+            <p>Project 1 </p>
+           
+        </section>
+        <section>
+            <h2>model 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vel nesciunt eaque doloremque dolorum error atque aspernatur, labore, aut esse repellat, provident laborum! Suscipit, similique veniam ad deserunt aspernatur magnam.</p>
+        </section>
+        <section>
+            <h2>model 3</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente voluptates consectetur error veniam, magni molestiae voluptate, commodi labore soluta recusandae quod mollitia deserunt nihil dolore quasi. Ducimus voluptatum inventore in!</p>
+        </section>
+        <section>
+            <h2>model 4</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tenetur quam debitis placeat, neque dolor deleniti repellat. Assumenda optio, expedita nulla officia iure ab autem error culpa saepe, deserunt nisi.</p>
+        </section>
+        <section>
+            <h2>model 5</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tenetur quam debitis placeat, neque dolor deleniti repellat. Assumenda optio, expedita nulla officia iure ab autem error culpa saepe, deserunt nisi.</p>
+        </section>
+        <section>
+            <h2>model 6</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tenetur quam debitis placeat, neque dolor deleniti repellat. Assumenda optio, expedita nulla officia iure ab autem error culpa saepe, deserunt nisi.</p>
+        </section>
+       
+    </main>
+</body>
+</html>
