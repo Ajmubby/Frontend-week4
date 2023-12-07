@@ -8,12 +8,10 @@
 </head>
 <body>
     <style>
-        p{
-            padding: none;
-            border: none;
-            text-align: center;
+        *{
+            padding: 0;
+            margin: 0;
         }
-
         section{
             overflow: auto;
             border: solid 1px transparent;
@@ -22,21 +20,28 @@
             
         }
 
+        h2,p{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: auto;
+            max-height: 100px;
+        }
+       
         main{
             display: grid;
-            grid-template-columns: (4, 1fr);
-            grid-template-rows:(4, 150px);
+            z-index: -1;
+            top: 150px;
+            
+            /* justify-content: space-evenly; */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows:repeat(4, 150px);
             grid-template-areas: 
+            "a a a a"
             "a a a a"
             "b c f f"
             "d e f f";
-            gap:20px 20px;
+            gap: 20px;
         }
-        h2{
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-       
 
         section:nth-of-type(1){
             grid-area: a;
@@ -56,15 +61,58 @@
         section:nth-of-type(6){
             grid-area: f;
         }
+
+        nav ul{
+            height: 100px;
+            background-color: greenyellow;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration-line: underline;
+        }
+
+        nav li:nth-child(2n+4){
+            align-self: flex-end;
+        }
+        nav li:nth-child(4n+1){
+            align-self: flex-start;
+        }
+        nav{
+            position: relative;
+            inset-inline: 0;
+        }
         
 
     </style>
 </head>
 <body>
+    <!-- nav>ul>(li>a{link$})*6 -->
+
+    <nav>
+        <ul>
+            <li><a href="">link1</a></li>
+            <li><a href="">link2</a></li>
+            <li><a href="">link3</a></li>
+            <li><a href="">link4</a></li>
+            <li><a href="">link5</a></li>
+            <li><a href="">link6</a></li>
+        </ul>
+    </nav>
     <main>
         <section>
             <h2>model 1</h2>
-            <p>Project 1 </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, at! Voluptatum, quas alias. Nostrum facilis aperiam quaerat nihil est, omnis repellat veniam vitae cumque, cum reprehenderit perferendis nesciunt ipsam vel. </p>
            
         </section>
         <section>
